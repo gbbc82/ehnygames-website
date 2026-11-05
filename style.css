@@ -55,3 +55,9 @@ footer{background:radial-gradient(ellipse at 0% 0%,#1c3e6c,transparent 55%),#0b1
 .footer-bottom{border-top:1px solid #849ab34d;display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;padding:1rem 0;font-size:.76rem;color:#c7d8f2}
 @media(max-width:620px){.top nav{gap:.25rem}.top nav a{gap:.35rem;padding:.45rem .55rem}.top nav svg{width:17px}.top nav .language{margin-left:0}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
 @media(max-width:360px){.footer-grid{grid-template-columns:1fr}}
+
+.world-grid img{object-fit:contain;background:#eaf2ff}
+.gallery-more{margin-top:1rem}
+.gallery-more summary{width:fit-content;cursor:pointer;border:1px solid #b9cbea;border-radius:14px;padding:.65rem 1rem;background:white;font-weight:700}
+.gallery-more .shots{margin-top:1rem}
+.shots img{height:auto}
