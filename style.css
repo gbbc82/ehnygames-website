@@ -93,3 +93,14 @@ html[data-lang="ko"] [data-locale="en"],html[data-lang="en"] [data-locale="ko"]{
 .game-detail-links,.unified-footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .unified-footer{padding:30px 0;font-size:15px}
 @media(max-width:720px){.game-detail .top{gap:12px}.game-detail .top nav{gap:2px}.game-detail .top nav a,.game-detail .top nav button{font-size:14px;padding:.4rem .55rem}}
+
+/* Shared footer on both game pages */
+.game-site-footer{font-size:16px}
+.game-site-footer-top{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;padding:38px 0}
+.game-site-footer .brand{align-self:start}
+.game-footer-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.game-footer-nav a{display:block;padding:10px 0;text-decoration:none;border-bottom:1px solid #849ab34d;line-height:1.5}
+.game-footer-nav a:hover{color:#8af7d6;text-decoration:underline}
+.game-footer-nav a:last-child{grid-column:1/-1}
+.game-site-footer-bottom{border-top:1px solid #849ab34d;padding:16px 0;font-size:13px;color:#c7d8f2}
+@media(max-width:620px){.game-site-footer-top{grid-template-columns:1fr;gap:24px}.game-footer-nav{grid-template-columns:1fr}.game-footer-nav a:last-child{grid-column:auto}}

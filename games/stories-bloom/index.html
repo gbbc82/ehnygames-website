@@ -4,7 +4,7 @@
 <title>이야기가 피는 왕국 · EHNY Games</title>
 <meta name="description" content="할머니의 레시피북으로 잿빛 마을에 색을 되찾아 주는 따뜻한 동화 머지 게임">
 <link rel="canonical" href="https://ehnygames.com/games/stories-bloom/">
-<link rel="icon" href="img/icon.png"><link rel="stylesheet" href="/style.css?v=game-pages">
+<link rel="icon" href="img/icon.png"><link rel="stylesheet" href="/style.css?v=20261108-games3">
 <meta name="theme-color" content="#FAF0E2">
 <meta property="og:type" content="website"><meta property="og:site_name" content="EHNY Games">
 <meta property="og:title" content="이야기가 피는 왕국 · EHNY Games">
@@ -66,8 +66,8 @@ html[data-lang="ko"] [data-locale="en"],html[data-lang="en"] [data-locale="ko"]{
 </style><script>(function(){var q=new URLSearchParams(location.search).get('lang');var lang=q==='ko'||q==='en'?q:((navigator.language||'en').toLowerCase().startsWith('ko')?'ko':'en');document.documentElement.lang=lang;document.documentElement.dataset.lang=lang;})();</script></head>
 <body class="bloom-page">
 <a class="skip" href="#main"><span data-locale="ko">본문으로 건너뛰기</span><span data-locale="en">Skip to content</span></a>
-<header><div class="wrap top"><a class="brand" href="/"><img src="/assets/ehny_horizontal_on_dark.png" alt="EHNY Games" width="170" height="50"></a><nav aria-label="Menu / 메뉴">
-<a class="games-nav" href="/#games"><span data-locale="ko">게임</span><span data-locale="en">Games</span></a><a class="support-nav" href="/support/"><span data-locale="ko">지원</span><span data-locale="en">Support</span></a>
+<header><div class="wrap top"><a class="brand" href="/?v=20261108-games3"><img src="/assets/ehny_horizontal_on_dark.png" alt="EHNY Games" width="170" height="50"></a><nav aria-label="Menu / 메뉴">
+<a class="games-nav" href="/?v=20261108-games3#games"><span data-locale="ko">게임</span><span data-locale="en">Games</span></a><a class="support-nav" href="/support/"><span data-locale="ko">지원</span><span data-locale="en">Support</span></a>
 <button type="button" lang="ko" data-lang="ko" aria-pressed="true">한국어</button><span aria-hidden="true">|</span><button type="button" lang="en" data-lang="en" aria-pressed="false">English</button>
 </nav></div></header>
 <main id="main"><div data-locale="ko" lang="ko">
@@ -117,7 +117,7 @@ html[data-lang="ko"] [data-locale="en"],html[data-lang="en"] [data-locale="ko"]{
 <p class="info"><strong>Free to play:</strong> Dessert &amp; Garden Villages free · unlock villages with petals · Complete Edition unlocks everything</p>
 <div class="bloom-links"><a href="/privacy/stories-bloom/?lang=en">Privacy Policy</a><a href="mailto:contact@ehnygames.com">Contact · contact@ehnygames.com</a></div></div></section>
 </div></main>
-<footer><div class="wrap bloom-foot"><span>© 2026 EHNY Games</span><nav aria-label="Footer / 하단"><a class="bolbol-nav" href="/games/bolbolland/?lang=ko"><span data-locale="ko">볼볼랜드</span><span data-locale="en">BolBol Land</span></a><a class="policies-nav" href="/privacy/"><span data-locale="ko">게임별 개인정보처리방침</span><span data-locale="en">Game privacy policies</span></a><a href="mailto:contact@ehnygames.com">contact@ehnygames.com</a></nav></div></footer>
+<footer class="game-site-footer"><div class="wrap"><div class="game-site-footer-top"><a class="brand footer-home" href="/?v=20261108-games3"><img src="/assets/ehny_horizontal_on_dark.png" alt="EHNY Games" width="170" height="50"></a><div class="game-footer-nav"><a class="footer-games" href="/?v=20261108-games3#games"><span data-locale="ko">게임 목록</span><span data-locale="en">All games</span></a><a class="footer-bolbol" href="/games/bolbolland/?lang=ko&amp;v=20261108-games3"><span data-locale="ko">볼볼랜드</span><span data-locale="en">BolBol Land</span></a><a class="footer-stories" href="/games/stories-bloom/?lang=ko&amp;v=20261108-games3"><span data-locale="ko">이야기가 피는 왕국</span><span data-locale="en">The Kingdom Where Stories Bloom</span></a><a class="policies-nav" href="/privacy/"><span data-locale="ko">게임별 개인정보처리방침</span><span data-locale="en">Game privacy policies</span></a><a href="mailto:contact@ehnygames.com"><span data-locale="ko">문의</span><span data-locale="en">Contact</span> · contact@ehnygames.com</a></div></div><div class="game-site-footer-bottom">© 2026 EHNY Games</div></div></footer>
 <script>
 (function(){
 var descriptions={ko:"할머니의 레시피북으로 잿빛 마을에 색을 되찾아 주는 따뜻한 동화 머지 게임",en:"A cozy storybook merge game — bring color back to gray villages with Grandma's recipes"};
@@ -125,10 +125,13 @@ var titles={ko:"이야기가 피는 왕국 · EHNY Games",en:"The Kingdom Where 
 function changeLanguage(lang,updateUrl){
 document.documentElement.lang=lang;document.documentElement.dataset.lang=lang;document.title=titles[lang];
 document.querySelectorAll('button[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===lang));});
-document.querySelector('.brand').href=lang==='ko'?'/':'/en/';
-document.querySelector('.games-nav').href=lang==='ko'?'/#games':'/en/#games';
+document.querySelector('.brand').href=lang==='ko'?'/?v=20261108-games3':'/en/?v=20261108-games3';
+document.querySelector('.games-nav').href=lang==='ko'?'/?v=20261108-games3#games':'/en/?v=20261108-games3#games';
 document.querySelector('.support-nav').href=lang==='ko'?'/support/':'/en/support/';
-document.querySelector('.bolbol-nav').href='/games/bolbolland/?lang='+lang;
+document.querySelector('.footer-home').href=lang==='ko'?'/?v=20261108-games3':'/en/?v=20261108-games3';
+document.querySelector('.footer-games').href=lang==='ko'?'/?v=20261108-games3#games':'/en/?v=20261108-games3#games';
+document.querySelector('.footer-bolbol').href='/games/bolbolland/?lang='+lang+'&v=20261108-games3';
+document.querySelector('.footer-stories').href='/games/stories-bloom/?lang='+lang+'&v=20261108-games3';
 document.querySelector('.policies-nav').href=lang==='ko'?'/privacy/':'/en/privacy/';
 document.querySelector('meta[name="description"]').content=descriptions[lang];
 document.querySelector('meta[property="og:title"]').content=titles[lang];
