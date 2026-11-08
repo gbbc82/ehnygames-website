@@ -104,3 +104,16 @@ html[data-lang="ko"] [data-locale="en"],html[data-lang="en"] [data-locale="ko"]{
 .game-extras summary:focus-visible{outline:3px solid #a74660;outline-offset:4px;border-radius:18px}
 @media(max-width:480px){.bloom-links{flex-direction:column;align-items:stretch}.bloom-links a{font-size:14px;padding:11px 13px}.game-extras summary{padding:16px;font-size:15px}}
 @media(prefers-reduced-motion:reduce){.bloom-page .top nav button,.bloom-links a,.game-extras{transition:none}.bloom-links a:hover{transform:none}}
+
+/* Readable feature symbols and a single-row mobile header */
+.bloom-feature .feature-heading{display:flex;align-items:center;gap:14px;margin:0 0 16px}
+.bloom-feature .feature-heading strong{margin:0}
+.feature-symbol{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;min-height:44px;font-size:36px;line-height:1.2;font-family:"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif}
+@media(max-width:620px){
+.bloom-page header .top{flex-wrap:nowrap;gap:8px;padding-block:10px}
+.bloom-page header .top nav{gap:4px;flex-wrap:nowrap}
+.bloom-page header .top nav>a{font-size:12px;padding:6px 5px;gap:0}
+.bloom-page header .top nav button{font-size:12px;padding:6px 0;min-width:44px;min-height:44px;border-radius:999px;border-color:transparent;box-shadow:none}
+.bloom-page header .top nav button[aria-pressed="true"]{box-shadow:none}
+.bloom-page header .top nav button:active{transform:none}
+}

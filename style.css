@@ -137,3 +137,24 @@ html[data-lang="ko"] [data-locale="en"],html[data-lang="en"] [data-locale="ko"]{
 .game-footer-nav a:hover{padding-left:5px}
 @media(max-width:480px){.studio-actions{gap:12px}.ui-button{font-size:14px;min-height:48px;padding:12px 17px}.ui-button .ui-icon{width:18px;height:18px}.game-card .game-card-link{min-width:150px}}
 @media(prefers-reduced-motion:reduce){.ui-button,.game-card,.game-card .game-card-link,.ui-arrow-circle .ui-icon,.top nav a,.footer-links a,.game-footer-nav a{transition:none}.ui-button:hover,.game-card:hover,.game-card:focus-within,.game-card>a:hover .game-card-link,.top nav a:hover,.ui-arrow-circle .ui-icon{transform:none!important}}
+
+/* Consistent game cards and compact mobile navigation */
+.lang-short{display:none}
+.language-toggle{display:inline-flex;align-items:center;gap:4px}
+.game-card-heading{min-height:104px}
+.game-card-icon{object-fit:contain;background:#fff7ed}
+.game-card .game-card-body>p{min-height:5.1em}
+.game-card-cover.stories{object-fit:contain;object-position:center;padding:12px;background:#f4e8d8}
+@media(max-width:650px){.game-card-heading{min-height:0}.game-card .game-card-body>p{min-height:0}}
+@media(max-width:620px){
+header .top{flex-wrap:nowrap;gap:8px;padding-block:10px}
+header .top .brand{flex:none}
+header .top .brand img{width:clamp(80px,23vw,104px);height:auto}
+header .top nav{flex-wrap:nowrap;gap:4px;margin-left:auto}
+header .top nav>a{min-height:44px;justify-content:center;padding:6px 5px;font-size:12px;white-space:nowrap}
+header .top nav>a>svg{display:none}
+header .top nav .language{min-width:44px;margin-left:0;padding:6px}
+header .top .lang-long{display:none}
+header .top .lang-short{display:inline}
+header .top .language-toggle{gap:0;flex:none;border:1px solid #7896bd;border-radius:999px;padding:2px;background:#ffffff08}
+}
