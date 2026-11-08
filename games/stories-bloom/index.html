@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko" data-lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이야기가 피는 왕국 · EHNY Games</title>
+<meta name="description" content="할머니의 레시피북으로 잿빛 마을에 색을 되찾아 주는 따뜻한 동화 머지 게임">
+<link rel="canonical" href="https://ehnygames.com/games/stories-bloom/">
+<link rel="icon" href="img/icon.png"><link rel="stylesheet" href="/style.css?v=stories-bloom">
+<meta name="theme-color" content="#FAF0E2">
+<meta property="og:type" content="website"><meta property="og:site_name" content="EHNY Games">
+<meta property="og:title" content="이야기가 피는 왕국 · EHNY Games">
+<meta property="og:description" content="할머니의 레시피북으로 잿빛 마을에 색을 되찾아 주는 따뜻한 동화 머지 게임">
+<meta property="og:url" content="https://ehnygames.com/games/stories-bloom/">
+<meta property="og:image" content="https://ehnygames.com/games/stories-bloom/img/og_ko.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://ehnygames.com/games/stories-bloom/img/og_ko.jpg">
+<style>
+.bloom-page{background:#FAF0E2;color:#513d39;font-size:18px;line-height:1.85}
+.bloom-page main{padding-bottom:0}
+.bloom-page button{font:inherit}
+.bloom-page .top nav button{border:0;color:white;background:transparent;cursor:pointer;border-radius:99px;padding:.45rem .85rem;min-height:44px}
+.bloom-page .top nav button[aria-pressed="true"]{background:#f0d4db;color:#722b40;font-weight:800}
+.bloom-page button:focus-visible{outline:3px solid #B5485F;outline-offset:4px}
+.bloom-banner{width:min(1280px,calc(100% - 40px));margin:28px auto 0;border-radius:28px;overflow:hidden;box-shadow:0 20px 50px #704b3b18}
+.bloom-banner img{width:100%;height:auto;aspect-ratio:1920/820}
+.bloom-intro{display:flex;align-items:center;gap:24px;padding-top:35px;padding-bottom:52px}
+.bloom-icon{width:100px;height:100px;flex:none;border-radius:24px;box-shadow:0 8px 25px #704b3b25}
+.bloom-page h1,.bloom-page h2,.bloom-page h3{color:#B5485F;line-height:1.4;word-break:keep-all;overflow-wrap:anywhere}
+.bloom-page h1{font-size:clamp(28px,4vw,43px);margin:12px 0}
+.bloom-page h2{font-size:clamp(26px,3.4vw,36px)}
+.bloom-page h3{font-size:20px}
+.bloom-status{display:inline-block;background:#e6eddf;border:1px solid #c6d2ba;color:#44593c;padding:6px 14px;border-radius:99px;font-size:13px;font-weight:700}
+.bloom-subtitle{margin:0;font-size:17px;color:#735d53}
+.bloom-section{padding:65px 0;border-top:1px solid #dfcbbc}
+.bloom-eyebrow{color:#926b50;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.bloom-story{display:grid;grid-template-columns:1.4fr .6fr;gap:65px;align-items:center}
+.bloom-story p{max-width:680px}
+.bloom-story figure{justify-self:center;width:min(100%,230px);border-radius:100px 100px 24px 24px;overflow:hidden;box-shadow:0 15px 40px #704b3b1a;background:#fffbf4}
+.bloom-story img{width:100%;height:auto}
+.bloom-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.bloom-feature{padding:25px 28px;background:#fffaf2;border:1px solid #e7d7c5;border-radius:22px;box-shadow:0 8px 24px #704b3b08}
+.bloom-feature:last-child{grid-column:1/-1}
+.bloom-feature p{margin:0}
+.bloom-feature strong{display:block;color:#9d3e53;font-size:20px;margin-bottom:10px}
+.bloom-family{background:#e8eddf;border:1px solid #ccd8bf;border-radius:26px;padding:clamp(25px,5vw,48px)}
+.bloom-family ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 30px}
+.bloom-family li{padding-left:25px;position:relative}
+.bloom-family li::before{content:"✓";position:absolute;left:0;color:#527343;font-weight:800}
+.bloom-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.bloom-gallery figure{padding:10px;background:#fffaf2;border:1px solid #e7d7c5;border-radius:22px;overflow:hidden}
+.bloom-gallery img{width:100%;height:auto;border-radius:14px}
+.bloom-gallery .portrait{grid-row:span 2;display:flex;flex-direction:column}
+.bloom-gallery .portrait img{object-fit:contain;flex:1;min-height:0;max-height:750px;background:#f9efdf}
+.bloom-gallery .recipes{grid-column:1/-1}
+.bloom-gallery figcaption{padding:9px 8px 4px;color:#755e51;font-size:14px}
+.bloom-gallery-note{font-size:14px;color:#80695a;margin-top:8px}
+.bloom-cta{text-align:center;background:#fffaf2;border-radius:28px;border:1px solid #e7d7c5;padding:clamp(28px,6vw,60px);box-shadow:0 15px 40px #704b3b0c}
+.bloom-play{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0;background:#554b48;color:#fff9f0;border-radius:14px;padding:15px 28px;margin:16px 0 8px;font-size:20px;font-weight:700;cursor:default}
+.bloom-play small{display:block;font-size:12px;font-weight:400;line-height:1.4}
+.bloom-cta .info{font-size:16px;max-width:740px;margin:16px auto}
+.bloom-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 30px;margin-top:28px;font-size:16px}
+.bloom-links a{color:#934056}
+.bloom-foot{font-size:15px;padding:30px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+html[data-lang="ko"] [data-locale="en"],html[data-lang="en"] [data-locale="ko"]{display:none!important}
+@media(max-width:720px){.bloom-page{font-size:17px}.bloom-banner{width:calc(100% - 24px);margin-top:15px;border-radius:18px}.bloom-intro{align-items:flex-start;gap:16px;padding-top:25px;padding-bottom:35px}.bloom-icon{width:64px;height:64px;border-radius:16px}.bloom-status{font-size:11px;padding:5px 9px}.bloom-subtitle{font-size:15px}.bloom-section{padding:40px 0}.bloom-story{grid-template-columns:1fr;gap:25px}.bloom-story figure{width:170px}.bloom-feature-grid,.bloom-family ul{grid-template-columns:1fr}.bloom-gallery{gap:12px}.bloom-feature{padding:22px}.bloom-page .top{gap:12px}.bloom-page .top nav{gap:2px}.bloom-page .top nav a,.bloom-page .top nav button{font-size:14px;padding:.4rem .55rem}.bloom-foot{font-size:13px}}
+@media(max-width:400px){.bloom-intro{display:block}.bloom-icon{margin-bottom:16px}}
+</style><script>(function(){var q=new URLSearchParams(location.search).get('lang');var lang=q==='ko'||q==='en'?q:((navigator.language||'en').toLowerCase().startsWith('ko')?'ko':'en');document.documentElement.lang=lang;document.documentElement.dataset.lang=lang;})();</script></head>
+<body class="bloom-page">
+<a class="skip" href="#main"><span data-locale="ko">본문으로 건너뛰기</span><span data-locale="en">Skip to content</span></a>
+<header><div class="wrap top"><a class="brand" href="/"><img src="/assets/ehny_horizontal_on_dark.png" alt="EHNY Games" width="170" height="50"></a><nav aria-label="Menu / 메뉴">
+<a class="games-nav" href="/#games"><span data-locale="ko">게임</span><span data-locale="en">Games</span></a><a class="support-nav" href="/support/"><span data-locale="ko">지원</span><span data-locale="en">Support</span></a>
+<button type="button" lang="ko" data-lang="ko" aria-pressed="true">한국어</button><span aria-hidden="true">|</span><button type="button" lang="en" data-lang="en" aria-pressed="false">English</button>
+</nav></div></header>
+<main id="main"><div data-locale="ko" lang="ko">
+<div class="bloom-banner"><img src="img/hero_ko.jpg" alt="이야기가 피는 왕국" width="1920" height="820" fetchpriority="high"></div>
+<div class="wrap bloom-intro"><img class="bloom-icon" src="img/icon.png" alt="게임 아이콘" width="100" height="100"><div><span class="bloom-status">비공개 테스트 중 · 곧 출시</span><h1>이야기가 피는 왕국</h1><p class="bloom-subtitle">머지 &amp; 레시피 · 아이와 어른이 함께 즐기는 동화책 머지 게임</p></div></div>
+<section class="wrap bloom-section bloom-story"><div><p class="bloom-eyebrow">01 / A LETTER TO THE SKY</p><h2>이야기</h2><p>할머니 여왕님이 돌아가신 날, 하늘 공주 언니의 슬픔은 큰 폭풍이 되었어요. 그날 이후 왕국의 마을들은 잿빛으로 잠들고 가는 비가 그치지 않아요.</p>
+<p>막내 햇살 공주는 할머니의 레시피북을 품에 안고 길을 나섭니다. 마을 사람들의 부탁을 들어주고, 무너진 가게를 고치고, 구름 위 언니에게 매일 편지를 보내면서요.</p></div><figure><img src="img/gallery_1_princess.jpg" alt="레시피북을 안은 햇살 공주" width="720" height="1280" loading="lazy"></figure></section>
+<section class="wrap bloom-section"><p class="bloom-eyebrow">02 / MERGE A LITTLE MAGIC</p><h2>이런 게임이에요</h2><div class="bloom-feature-grid"><article class="bloom-feature"><p>🍓 <strong>합쳐서 만들기</strong></p><p>— 같은 재료를 합치면 디저트와 선물이 돼요. 재료를 누르면 만들 수 있는 것을 그림으로 보여 줘요.</p></article>
+<article class="bloom-feature"><p>🏡 <strong>가게 고치기</strong></p><p>— 가게를 고칠 때마다 주인의 사연이 열리고 마을에 색이 돌아와요.</p></article>
+<article class="bloom-feature"><p>💌 <strong>여섯 마을, 하나의 이야기</strong></p><p>— 디저트 마을부터 별빛 마을까지, 언니를 찾아가는 여정.</p></article>
+<article class="bloom-feature"><p>🌷 <strong>마을 꾸미기</strong></p><p>— 꽃잎으로 꽃밭·분수·가로등을 놓으면 주민들이 산책하며 인사해요.</p></article>
+<article class="bloom-feature"><p>🎙️ <strong>목소리로 듣는 동화</strong></p><p>— 글을 읽기 어려운 어린이도 함께할 수 있어요.</p></article></div></section>
+<section class="wrap bloom-section"><div class="bloom-family"><p class="bloom-eyebrow">03 / TOGETHER, AT YOUR PACE</p><h2>가족이 안심할 수 있게</h2><ul><li>시간 제한도, 실패도 없어요.</li><li>광고는 원할 때만 보는 보상형 광고뿐이에요.</li><li>결제 화면은 보호자 확인을 거쳐야 열려요.</li><li>회원가입 없이 바로 시작하고, 개인정보를 모으지 않아요.</li></ul></div></section>
+<section class="wrap bloom-section"><p class="bloom-eyebrow">04 / PAGES FROM THE KINGDOM</p><h2>왕국의 한 페이지</h2><p class="bloom-gallery-note">게임 아트 · 실제 게임 화면은 추후 추가됩니다.</p><div class="bloom-gallery"><figure class="portrait"><img src="img/gallery_1_princess.jpg" alt="햇살 공주" loading="lazy" width="720" height="1280"><figcaption>햇살 공주</figcaption></figure>
+<figure class=""><img src="img/gallery_3_bakery.jpg" alt="제과점" loading="lazy" width="1200" height="900"><figcaption>제과점</figcaption></figure>
+<figure class=""><img src="img/gallery_4_textile_palace.jpg" alt="직물 별궁" loading="lazy" width="1200" height="900"><figcaption>직물 별궁</figcaption></figure>
+<figure class="recipes"><img src="img/gallery_5_recipes.jpg" alt="레시피 아이템" loading="lazy" width="1240" height="240"><figcaption>레시피 아이템</figcaption></figure></div>
+<!-- Add screenshot_1.jpg, screenshot_2.jpg and screenshot_3.jpg here when gameplay captures are available. -->
+</section>
+<section class="wrap bloom-section"><div class="bloom-cta"><img class="bloom-icon" src="img/icon.png" alt="" width="100" height="100" loading="lazy" style="margin:0 auto 22px"><span class="bloom-status">비공개 테스트 중 · 곧 출시</span><h2 style="margin-top:20px">이야기가 피는 왕국</h2>
+<!-- On release: replace the disabled button with a link to https://play.google.com/store/apps/details?id=com.ehnygames.storybloom and update status badges to 지금 플레이 / Play now. -->
+<button class="bloom-play" type="button" disabled aria-disabled="true" data-play-url=""><svg width="25" height="28" viewBox="0 0 25 28" aria-hidden="true" fill="currentColor"><path d="M2 1 24 14 2 27Z"/></svg><span><small>곧 출시</small>Google Play</span></button>
+<p class="info"><strong>지원:</strong> Android (Google Play) · 한국어 / English</p>
+<p class="info"><strong>무료로 즐기기:</strong> 디저트 마을·정원 마을 무료 · 꽃잎으로 다음 마을 열기 · 완전판으로 모든 마을과 특별 장식</p>
+<div class="bloom-links"><a href="/privacy/stories-bloom/?lang=ko">개인정보처리방침</a><a href="mailto:contact@ehnygames.com">문의 · contact@ehnygames.com</a></div></div></section>
+</div><div data-locale="en" lang="en">
+<div class="bloom-banner"><img src="img/hero_en.jpg" alt="The Kingdom Where Stories Bloom" width="1920" height="820" fetchpriority="high"></div>
+<div class="wrap bloom-intro"><img class="bloom-icon" src="img/icon.png" alt="Game icon" width="100" height="100"><div><span class="bloom-status">In closed testing · Coming soon</span><h1>The Kingdom Where Stories Bloom</h1><p class="bloom-subtitle">Merge &amp; Recipes · A storybook merge game for kids and grown-ups to enjoy together</p></div></div>
+<section class="wrap bloom-section bloom-story"><div><p class="bloom-eyebrow">01 / A LETTER TO THE SKY</p><h2>The Story</h2><p>On the day Grandma Queen passed away, Princess Skye's sorrow became a great storm. Since then, the kingdom's villages have fallen asleep in gray, under a thin rain that never stops.</p>
+<p>The youngest, Princess Sunny, sets out with Grandma's recipe book held close — helping villagers, fixing broken shops, and sending a letter every day to her sister above the clouds.</p></div><figure><img src="img/gallery_1_princess.jpg" alt="Princess Sunny holding the recipe book" width="720" height="1280" loading="lazy"></figure></section>
+<section class="wrap bloom-section"><p class="bloom-eyebrow">02 / MERGE A LITTLE MAGIC</p><h2>What You'll Do</h2><div class="bloom-feature-grid"><article class="bloom-feature"><p>🍓 <strong>Merge &amp; make</strong></p><p>— Combine matching ingredients into desserts and gifts. Tap any ingredient to see pictures of what it can become.</p></article>
+<article class="bloom-feature"><p>🏡 <strong>Fix shops</strong></p><p>— Every shop you fix opens its owner's story and brings color back to the village.</p></article>
+<article class="bloom-feature"><p>💌 <strong>Six villages, one story</strong></p><p>— From Dessert Village to Starlight Village, a journey to find her sister.</p></article>
+<article class="bloom-feature"><p>🌷 <strong>Decorate</strong></p><p>— Place flower beds, fountains, and lamp posts with petals, and villagers stroll by to say hello.</p></article>
+<article class="bloom-feature"><p>🎙️ <strong>A story you can listen to</strong></p><p>— Voiced lines let young players who are still learning to read join in.</p></article></div></section>
+<section class="wrap bloom-section"><div class="bloom-family"><p class="bloom-eyebrow">03 / TOGETHER, AT YOUR PACE</p><h2>Made for Families</h2><ul><li>No timers, no failing.</li><li>Ads are optional rewarded videos only.</li><li>Purchase screens open only after a parent check.</li><li>No sign-up, and no personal data collected.</li></ul></div></section>
+<section class="wrap bloom-section"><p class="bloom-eyebrow">04 / PAGES FROM THE KINGDOM</p><h2>A glimpse of the kingdom</h2><p class="bloom-gallery-note">Game artwork · Gameplay screenshots will be added later.</p><div class="bloom-gallery"><figure class="portrait"><img src="img/gallery_1_princess.jpg" alt="Princess Sunny" loading="lazy" width="720" height="1280"><figcaption>Princess Sunny</figcaption></figure>
+<figure class=""><img src="img/gallery_3_bakery.jpg" alt="Bakery" loading="lazy" width="1200" height="900"><figcaption>Bakery</figcaption></figure>
+<figure class=""><img src="img/gallery_4_textile_palace.jpg" alt="Textile Palace" loading="lazy" width="1200" height="900"><figcaption>Textile Palace</figcaption></figure>
+<figure class="recipes"><img src="img/gallery_5_recipes.jpg" alt="Recipe ingredients" loading="lazy" width="1240" height="240"><figcaption>Recipe ingredients</figcaption></figure></div>
+<!-- Add screenshot_1.jpg, screenshot_2.jpg and screenshot_3.jpg here when gameplay captures are available. -->
+</section>
+<section class="wrap bloom-section"><div class="bloom-cta"><img class="bloom-icon" src="img/icon.png" alt="" width="100" height="100" loading="lazy" style="margin:0 auto 22px"><span class="bloom-status">In closed testing · Coming soon</span><h2 style="margin-top:20px">The Kingdom Where Stories Bloom</h2>
+<!-- On release: replace the disabled button with a link to https://play.google.com/store/apps/details?id=com.ehnygames.storybloom and update status badges to 지금 플레이 / Play now. -->
+<button class="bloom-play" type="button" disabled aria-disabled="true" data-play-url=""><svg width="25" height="28" viewBox="0 0 25 28" aria-hidden="true" fill="currentColor"><path d="M2 1 24 14 2 27Z"/></svg><span><small>Coming soon</small>Google Play</span></button>
+<p class="info"><strong>Platform:</strong> Android (Google Play) · Korean / English</p>
+<p class="info"><strong>Free to play:</strong> Dessert &amp; Garden Villages free · unlock villages with petals · Complete Edition unlocks everything</p>
+<div class="bloom-links"><a href="/privacy/stories-bloom/?lang=en">Privacy Policy</a><a href="mailto:contact@ehnygames.com">Contact · contact@ehnygames.com</a></div></div></section>
+</div></main>
+<footer><div class="wrap bloom-foot"><span>© 2026 EHNY Games</span><nav aria-label="Footer / 하단"><a class="policies-nav" href="/privacy/"><span data-locale="ko">게임별 개인정보처리방침</span><span data-locale="en">Game privacy policies</span></a><a href="mailto:contact@ehnygames.com">contact@ehnygames.com</a></nav></div></footer>
+<script>
+(function(){
+var descriptions={ko:"할머니의 레시피북으로 잿빛 마을에 색을 되찾아 주는 따뜻한 동화 머지 게임",en:"A cozy storybook merge game — bring color back to gray villages with Grandma's recipes"};
+var titles={ko:"이야기가 피는 왕국 · EHNY Games",en:"The Kingdom Where Stories Bloom · EHNY Games"};
+function changeLanguage(lang,updateUrl){
+document.documentElement.lang=lang;document.documentElement.dataset.lang=lang;document.title=titles[lang];
+document.querySelectorAll('button[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===lang));});
+document.querySelector('.brand').href=lang==='ko'?'/':'/en/';
+document.querySelector('.games-nav').href=lang==='ko'?'/#games':'/en/#games';
+document.querySelector('.support-nav').href=lang==='ko'?'/support/':'/en/support/';
+document.querySelector('.policies-nav').href=lang==='ko'?'/privacy/':'/en/privacy/';
+document.querySelector('meta[name="description"]').content=descriptions[lang];
+document.querySelector('meta[property="og:title"]').content=titles[lang];
+document.querySelector('meta[property="og:description"]').content=descriptions[lang];
+document.querySelector('meta[property="og:image"]').content='https://ehnygames.com/games/stories-bloom/img/og_'+lang+'.jpg';
+document.querySelector('meta[property="og:locale"]').content=lang==='ko'?'ko_KR':'en_US';
+document.querySelector('meta[name="twitter:image"]').content='https://ehnygames.com/games/stories-bloom/img/og_'+lang+'.jpg';
+if(updateUrl){var url=new URL(location.href);url.searchParams.set('lang',lang);history.replaceState(null,'',url);}
+}
+document.querySelectorAll('button[data-lang]').forEach(function(b){b.addEventListener('click',function(){changeLanguage(b.dataset.lang,true);});});
+window.addEventListener('popstate',function(){var q=new URLSearchParams(location.search).get('lang');changeLanguage(q==='ko'||q==='en'?q:((navigator.language||'en').toLowerCase().startsWith('ko')?'ko':'en'),false);});
+changeLanguage(document.documentElement.lang,false);
+})();
+</script></body></html>
