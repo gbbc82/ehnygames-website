@@ -1,0 +1,80 @@
+
+.bloom-page{background:#FAF0E2;color:#513d39;font-size:18px;line-height:1.85}
+.bloom-page main{padding-bottom:0}
+.bloom-page button{font:inherit}
+.bloom-page .top nav button{border:0;color:white;background:transparent;cursor:pointer;border-radius:99px;padding:.45rem .85rem;min-height:44px}
+.bloom-page .top nav button[aria-pressed="true"]{background:#f0d4db;color:#722b40;font-weight:800}
+.bloom-page button:focus-visible{outline:3px solid #B5485F;outline-offset:4px}
+.bloom-banner{width:min(1280px,calc(100% - 40px));margin:28px auto 0;border-radius:28px;overflow:hidden;box-shadow:0 20px 50px #704b3b18}
+.bloom-banner img{width:100%;height:auto;aspect-ratio:1920/820}
+.bloom-intro{display:flex;align-items:center;gap:24px;padding-top:35px;padding-bottom:52px}
+.bloom-icon{width:100px;height:100px;flex:none;border-radius:24px;box-shadow:0 8px 25px #704b3b25}
+.bloom-page h1,.bloom-page h2,.bloom-page h3{color:#B5485F;line-height:1.4;word-break:keep-all;overflow-wrap:anywhere}
+.bloom-page h1{font-size:clamp(28px,4vw,43px);margin:12px 0}
+.bloom-page h2{font-size:clamp(26px,3.4vw,36px)}
+.bloom-page h3{font-size:20px}
+.bloom-status{display:inline-block;background:#e6eddf;border:1px solid #c6d2ba;color:#44593c;padding:6px 14px;border-radius:99px;font-size:13px;font-weight:700}
+.bloom-subtitle{margin:0;font-size:17px;color:#735d53}
+.bloom-section{padding:65px 0;border-top:1px solid #dfcbbc}
+.bloom-eyebrow{color:#926b50;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.bloom-story{display:grid;grid-template-columns:1.4fr .6fr;gap:65px;align-items:center}
+.bloom-story p{max-width:680px}
+.bloom-story figure{justify-self:center;width:min(100%,230px);border-radius:100px 100px 24px 24px;overflow:hidden;box-shadow:0 15px 40px #704b3b1a;background:#fffbf4}
+.bloom-story img{width:100%;height:auto}
+.bloom-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.bloom-feature{padding:25px 28px;background:#fffaf2;border:1px solid #e7d7c5;border-radius:22px;box-shadow:0 8px 24px #704b3b08}
+.bloom-feature:last-child{grid-column:1/-1}
+.bloom-feature p{margin:0}
+.bloom-feature strong{display:block;color:#9d3e53;font-size:20px;margin-bottom:10px}
+.bloom-family{background:#e8eddf;border:1px solid #ccd8bf;border-radius:26px;padding:clamp(25px,5vw,48px)}
+.bloom-family ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 30px}
+.bloom-family li{padding-left:25px;position:relative}
+.bloom-family li::before{content:"✓";position:absolute;left:0;color:#527343;font-weight:800}
+.bloom-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.bloom-gallery figure{padding:10px;background:#fffaf2;border:1px solid #e7d7c5;border-radius:22px;overflow:hidden}
+.bloom-gallery img{width:100%;height:auto;border-radius:14px}
+.bloom-gallery .portrait{grid-row:span 2;display:flex;flex-direction:column}
+.bloom-gallery .portrait img{object-fit:contain;flex:1;min-height:0;max-height:750px;background:#f9efdf}
+.bloom-gallery .recipes{grid-column:1/-1}
+.bloom-gallery figcaption{padding:9px 8px 4px;color:#755e51;font-size:14px}
+.bloom-gallery-note{font-size:14px;color:#80695a;margin-top:8px}
+.bloom-cta{text-align:center;background:#fffaf2;border-radius:28px;border:1px solid #e7d7c5;padding:clamp(28px,6vw,60px);box-shadow:0 15px 40px #704b3b0c}
+.bloom-play{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0;background:#554b48;color:#fff9f0;border-radius:14px;padding:15px 28px;margin:16px 0 8px;font-size:20px;font-weight:700;cursor:default}
+.bloom-play small{display:block;font-size:12px;font-weight:400;line-height:1.4}
+.bloom-cta .info{font-size:16px;max-width:740px;margin:16px auto}
+.bloom-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 30px;margin-top:28px;font-size:16px}
+.bloom-links a{color:#934056}
+.bloom-foot{font-size:15px;padding:30px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+html[data-lang="ko"] [data-locale="en"],html[data-lang="en"] [data-locale="ko"]{display:none!important}
+@media(max-width:720px){.bloom-page{font-size:17px}.bloom-banner{width:calc(100% - 24px);margin-top:15px;border-radius:18px}.bloom-intro{align-items:flex-start;gap:16px;padding-top:25px;padding-bottom:35px}.bloom-icon{width:64px;height:64px;border-radius:16px}.bloom-status{font-size:11px;padding:5px 9px}.bloom-subtitle{font-size:15px}.bloom-section{padding:40px 0}.bloom-story{grid-template-columns:1fr;gap:25px}.bloom-story figure{width:170px}.bloom-feature-grid,.bloom-family ul{grid-template-columns:1fr}.bloom-gallery{gap:12px}.bloom-feature{padding:22px}.bloom-page .top{gap:12px}.bloom-page .top nav{gap:2px}.bloom-page .top nav a,.bloom-page .top nav button{font-size:14px;padding:.4rem .55rem}.bloom-foot{font-size:13px}}
+@media(max-width:400px){.bloom-intro{display:block}.bloom-icon{margin-bottom:16px}}
+
+/* Shared layout for every game */
+.bloom-feature:last-child{grid-column:auto}
+.bloom-feature-grid:has(> :nth-child(3):last-child)>:last-child{grid-column:1/-1}
+.bloom-feature h3{font-size:20px;margin:0 0 12px}
+.bloom-feature p{margin:0}
+.bloom-feature p+p{margin-top:10px}
+.bloom-icon{object-fit:contain;background:#fffaf2}
+.bolbol-banner{display:grid;grid-template-columns:1.5fr 1fr;align-items:center;min-height:260px;padding:30px 50px;background:radial-gradient(circle at 15% 0%,#f3ddf0,transparent 60%),linear-gradient(130deg,#e6f2fa,#f9ebcd)}
+.bolbol-banner img{aspect-ratio:auto;height:auto;object-fit:contain}
+.bolbol-banner .bolbol-banner-logo{max-height:230px}
+.bolbol-banner .bolbol-banner-character{max-height:320px}
+.game-feature-extra{margin-top:22px}
+.game-extras{margin-top:28px;border:1px solid #dfcbbc;border-radius:20px;background:#fffaf2}
+.game-extras summary{padding:18px 24px;cursor:pointer;font-weight:700;color:#934055}
+.game-extras-content{padding:8px 24px 24px}
+.game-extras-content>h3{font-size:24px;margin:20px 0}
+.game-extras .world-grid img{aspect-ratio:4/5;object-fit:contain}
+.game-extras .world-grid article,.game-extras .characters figure{border-color:#e7d7c5;background:#fffaf2}
+.bloom-gallery img{max-height:480px;object-fit:contain;background:#f7efdf}
+.bloom-gallery .portrait img{max-height:480px}
+.gameplay-gallery img{height:480px;aspect-ratio:auto}
+@media(max-width:720px){.bolbol-banner{min-height:140px;padding:20px;gap:12px}.bolbol-banner .bolbol-banner-logo{max-height:150px}.bolbol-banner .bolbol-banner-character{max-height:180px}.game-extras-content{padding:0 14px 18px}.gameplay-gallery img{height:300px}}
+
+.bloom-feature-grid>:last-child:nth-child(odd){grid-column:1/-1}
+.bolbol-banner{aspect-ratio:1920/820;min-height:0;padding:clamp(12px,3vw,35px);grid-template-rows:minmax(0,1fr)}
+.bolbol-banner .bolbol-banner-logo,.bolbol-banner .bolbol-banner-character{height:100%;max-height:100%;width:100%}
+
+.bloom-gallery .portrait{grid-row:auto}
+.bloom-gallery figure{align-self:start}
