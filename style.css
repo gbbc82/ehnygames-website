@@ -158,3 +158,16 @@ header .top .lang-long{display:none}
 header .top .lang-short{display:inline}
 header .top .language-toggle{gap:0;flex:none;border:1px solid #7896bd;border-radius:999px;padding:2px;background:#ffffff08}
 }
+
+/* Four-language home controls */
+.four-language-links{padding:2px;border:1px solid #7896bd;border-radius:999px;gap:1px}
+.top nav .four-language-links a.language{margin:0;border:0;background:transparent;padding:7px 10px;font-size:13px}
+.top nav .four-language-links a[aria-current="page"]{background:#f0d4db;color:#722b40}
+@media(max-width:620px){
+.multilingual-home header .top .brand img{width:clamp(72px,22vw,100px)}
+.multilingual-home header .top nav{gap:3px}
+.multilingual-home header .top nav>a{min-width:30px;padding:4px}
+.multilingual-home header .top nav>a>svg{display:block;width:20px;height:20px}
+.multilingual-home header .top nav>a>span{display:none}
+.top nav .four-language-links a.language{min-width:32px;min-height:44px;padding:6px 0;font-size:12px}
+}

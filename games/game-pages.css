@@ -117,3 +117,23 @@ html[data-lang="ko"] [data-locale="en"],html[data-lang="en"] [data-locale="ko"]{
 .bloom-page header .top nav button[aria-pressed="true"]{box-shadow:none}
 .bloom-page header .top nav button:active{transform:none}
 }
+
+/* Four language versions use the same presentation. */
+[data-locale]{display:none!important}
+html[data-lang="ko"] [data-locale="ko"]{display:revert!important}
+html[data-lang="en"] [data-locale="en"]{display:revert!important}
+html[data-lang="ja"] [data-locale="ja"]{display:revert!important}
+html[data-lang="zh-TW"] [data-locale="zh-TW"]{display:revert!important}
+.promo-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+.promo-gallery figure{padding:8px}
+.promo-gallery img{height:auto;max-height:none;width:100%;object-fit:contain}
+.promo-gallery figcaption{font-size:13px;line-height:1.6}
+@media(max-width:900px){.promo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){
+.four-languages header .top .brand img{width:clamp(72px,22vw,100px)}
+.four-languages header .top nav{gap:3px}
+.four-languages header .top nav>a{min-width:30px;padding:4px}
+.four-languages header .top nav>a>svg{display:block;width:20px;height:20px}
+.four-languages header .top nav>a>span[data-locale]{display:none!important}
+.four-languages header .top nav button{min-width:32px;padding:6px 0}
+}
