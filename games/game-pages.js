@@ -9,7 +9,7 @@ document.querySelector('.brand').href=home;document.querySelector('.games-nav').
 document.querySelector('.support-nav').href=fallback==='ko'?'/support/':'/en/support/';
 if(c.nav){document.querySelector('.games-nav').setAttribute('aria-label',c.nav.games);document.querySelector('.support-nav').setAttribute('aria-label',c.nav.support);}
 document.querySelector('.footer-home').href=home;document.querySelector('.footer-games').href=home+'#games';
-document.querySelector('.footer-bolbol').href='/games/bolbolland/?lang='+fallback;
+document.querySelector('.footer-bolbol').href='/games/bolbolland/?lang='+lang;
 document.querySelector('.footer-stories').href='/games/stories-bloom/?lang='+lang;
 document.querySelector('.policies-nav').href=fallback==='ko'?'/privacy/':'/en/privacy/';
 document.querySelector('meta[name="description"]').content=c.description;document.querySelector('meta[property="og:title"]').content=c.title;
