@@ -32,117 +32,185 @@ footer{text-align:center;padding:30px 20px 38px;color:#7c665d;font-size:14px;let
 [hidden]{display:none!important}
 @media(max-width:480px){body{font-size:17px;line-height:1.85}.topbar{padding:12px 16px}main{padding:0 12px}article{border-radius:20px;padding:26px 22px}h2{font-size:19px;margin-top:30px}}
 @media print{body{background:white}.topbar{display:none}main{max-width:none;padding:0}article{box-shadow:none;border:0;padding:0}article::before{display:none}h2{break-after:avoid}footer{padding:20px}}
+
+/* Both complete language versions remain visible on the same page. */
+html{scroll-behavior:smooth}
+article+article{margin-top:32px}
+article{scroll-margin-top:20px}
+.languages a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 13px;border-radius:24px;text-decoration:none;font-size:15px}
+.languages a[aria-current="location"]{background:#f0dfe0;color:#77364a;font-weight:700}
+.languages a:hover{background:#eee4d8}
+.policy-updated{margin-top:36px;margin-bottom:0;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:#756258}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-<script>
-(function(){
-  var requested=new URLSearchParams(location.search).get('lang');
-  var lang=requested==='ko'||requested==='en'?requested:((navigator.language||'en').toLowerCase().indexOf('ko')===0?'ko':'en');
-  document.documentElement.lang=lang;
-  document.write('<style id="initial-language">article[lang="'+(lang==='ko'?'en':'ko')+'"]{display:none}</style>');
-})();
-</script>
+
 <script>(function(){var u=new URL(location.href);if(u.searchParams.has('v')){u.searchParams.delete('v');history.replaceState(null,'',u.pathname+u.search+u.hash);}})();</script></head>
 <body>
 <header class="topbar">
 <a href="/" style="margin-right:auto;align-self:center;font-size:15px;text-decoration:none">EHNY Games</a>
-<nav class="languages" aria-label="언어 / Language">
-<button type="button" lang="ko" data-lang="ko" aria-pressed="false">한국어</button>
-<span aria-hidden="true">|</span>
-<button type="button" lang="en" data-lang="en" aria-pressed="true">English</button>
-</nav>
+<nav class="languages" aria-label="언어 바로가기 / Language shortcuts"><a href="#policy-ko" lang="ko" data-lang="ko">한국어</a><span aria-hidden="true">|</span><a href="#policy-en" lang="en" data-lang="en">English</a></nav>
 </header>
 <main>
 <p style="font-size:14px"><a href="/privacy/">개인정보처리방침 / Privacy policies</a></p>
-<article lang="ko" aria-labelledby="title-ko">
+<article id="policy-ko" lang="ko" aria-labelledby="title-ko">
 <h1 id="title-ko">이야기가 피는 왕국 개인정보처리방침</h1>
-<p>시행일: 2026년 11월 8일</p>
+<p>시행일: 2026년 11월 9일</p>
 <p>EHNY Games(이하 &quot;개발자&quot;)는 모바일 게임 《이야기가 피는 왕국》(이하 &quot;게임&quot;)을 이용하는 분, 특히 어린이의 개인정보를 소중히 여깁니다. 이 방침은 게임이 어떤 정보를 다루고, 어떻게 보호하는지 알려 드립니다.</p>
-<h2>1. 개발자가 직접 모으는 개인정보는 없습니다</h2>
-<p>게임에는 회원가입, 로그인, 채팅, 사진·연락처·위치 접근 기능이 없습니다. 개발자는 이름, 이메일, 전화번호, 나이 등 이용자를 알아볼 수 있는 정보를 받거나 저장하지 않습니다.</p>
-<h2>2. 기기 안에만 저장되는 정보</h2>
-<p>게임 진행 상황(고친 가게, 하트·꽃잎·햇살 방울 수, 꾸미기 상태, 소리·언어 설정, 구매 여부 표시)은 이용자의 기기 안에만 저장되며 개발자의 서버로 보내지지 않습니다. 게임을 지우면 이 정보도 함께 지워집니다.</p>
-<h2>3. 광고 (Google AdMob)</h2>
+<section aria-labelledby="ko-section-1"><h2 id="ko-section-1"><strong>1. 이용자를 알아볼 수 있는 개인정보는 모으지 않습니다</strong></h2>
+<p>게임에는 회원가입, 채팅, 사진·연락처·위치 접근 기능이 없습니다. 개발자는 이름, 이메일, 전화번호, 나이 등 이용자를 알아볼 수 있는 정보를 받거나 저장하지 않습니다.</p>
+
+
+</section>
+<section aria-labelledby="ko-section-2"><h2 id="ko-section-2"><strong>2. 기기 안에만 저장되는 정보</strong></h2>
+<p>게임 진행 상황(고친 가게, 하트·꽃잎·기운 수, 소리·언어 설정, 구매 여부 표시, 친구·북마크 목록)은 이용자의 기기 안에 저장됩니다. 게임을 지우면 이 정보도 함께 지워집니다.</p>
+
+
+</section>
+<section aria-labelledby="ko-section-3"><h2 id="ko-section-3"><strong>3. 이웃 마을 구경 (Google Firebase)</strong></h2>
+<p>&quot;나만의 마을&quot;을 다른 이용자와 서로 구경할 수 있도록, 다음 정보만 Google Firebase(Firestore) 서버에 저장합니다.</p>
+<ul><li>무작위로 만들어지는 익명 사용자 번호 (이름·이메일과 연결되지 않습니다)</li>
+<li>내 마을 코드(무작위 8글자)와, 정해진 낱말 중에서 고른 마을 이름</li>
+<li>마을 꾸미기 배치(어떤 건물·장식을 어디에 놓았는지), 반짝임 점수, 받은 좋아요 수, 마지막으로 바꾼 시각</li>
+<li>누가 어느 마을에 좋아요를 보냈는지 (익명 번호와 날짜)</li></ul>
+<p>채팅, 자유롭게 쓰는 글, 사진은 주고받을 수 없습니다. 다른 이용자에게는 마을 모습, 마을 이름, 마을 코드, 좋아요 수만 보입니다. 게임 안 [이웃 마을] 창에서 &quot;내 마을 공개&quot;를 끄면 서버에 있는 내 마을 정보가 지워지고 더 이상 올라가지 않습니다. 정보는 전송 중 암호화됩니다. 자세한 내용은 Google 개인정보처리방침(<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>)을 참고해 주세요.</p>
+</section>
+<section aria-labelledby="ko-section-4"><h2 id="ko-section-4"><strong>4. 광고 (Google AdMob)</strong></h2>
 <p>게임은 이용자가 원할 때만 보는 보상형 광고를 보여 줄 수 있습니다. 광고는 Google AdMob을 통해 제공되며, 다음과 같이 설정합니다.</p>
-<ul>
-<li>어린이를 위한 앱으로 설정하여, 맞춤형(관심 기반) 광고를 보여 주지 않습니다.</li>
+<ul><li>어린이를 위한 앱으로 설정하여, 맞춤형(관심 기반) 광고를 보여 주지 않습니다.</li>
 <li>어린이에게 적합한 광고만 나오도록 요청합니다.</li>
-<li>광고 ID(Android 광고 식별자)를 수집하거나 전송하지 않도록 설정합니다.</li>
-</ul>
-<p>광고를 표시하는 과정에서 Google은 광고 전달과 부정 사용 방지에 필요한 최소한의 기술 정보(예: 기기 종류, 운영체제 버전, 대략적인 지역을 짐작할 수 있는 IP 정보)를 처리할 수 있습니다. 자세한 내용은 Google 개인정보처리방침(<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>)을 참고해 주세요.</p>
-<h2>4. 결제 (Google Play)</h2>
-<p>&quot;완전판&quot;은 Google Play 결제로만 구매할 수 있으며, 구매 전 보호자 확인 단계를 거칩니다. 결제 정보(카드 번호 등)는 Google이 처리하며 개발자는 받지 않습니다. 개발자는 구매가 완료되었다는 사실만 확인하여 게임 안의 내용을 열어 드립니다.</p>
-<h2>5. 게임 엔진</h2>
+<li>광고 ID(Android 광고 식별자)를 수집하거나 전송하지 않도록 설정합니다.</li></ul>
+<p>광고를 표시하는 과정에서 Google은 광고 전달과 부정 사용 방지에 필요한 최소한의 기술 정보(예: 기기 종류, 운영체제 버전, 대략적인 지역을 짐작할 수 있는 IP 정보)를 처리할 수 있습니다.</p>
+</section>
+<section aria-labelledby="ko-section-5"><h2 id="ko-section-5"><strong>5. 결제 (Google Play)</strong></h2>
+<p>&quot;왕국 열쇠&quot;는 Google Play 결제로만 구매할 수 있으며, 구매 전 보호자 확인 단계를 거칩니다. 결제 정보(카드 번호 등)는 Google이 처리하며 개발자는 받지 않습니다. 개발자는 구매가 완료되었다는 사실만 확인하여 게임 안의 내용을 열어 드립니다.</p>
+
+
+</section>
+<section aria-labelledby="ko-section-6"><h2 id="ko-section-6"><strong>6. 게임 엔진</strong></h2>
 <p>게임은 Unity 엔진으로 만들어졌습니다. Unity는 앱 실행 안정성을 위해 익명화된 기술 정보(예: 기기 종류, 오류 기록)를 처리할 수 있습니다. 개발자는 별도의 분석·추적 도구를 사용하지 않습니다.</p>
-<h2>6. 제3자 제공 및 처리 위탁</h2>
-<p>개발자는 이용자의 개인정보를 다른 사람이나 회사에 팔거나 제공하지 않습니다. 위 3~5항의 Google·Unity 서비스 외에 개인정보 처리를 맡기는 곳은 없습니다.</p>
-<h2>7. 어린이(만 14세 미만)의 개인정보</h2>
-<p>게임은 어린이와 가족이 함께 즐기도록 만들어졌습니다. 개발자는 어린이의 개인정보를 의도적으로 수집하지 않으며, 「개인정보 보호법」, 미국 아동 온라인 개인정보 보호법(COPPA), 유럽 일반개인정보보호법(GDPR) 등 관련 법을 지키기 위해 노력합니다. 바깥 링크, 구매 화면 등은 보호자 확인을 거친 뒤에만 열립니다.</p>
-<h2>8. 정보의 보관과 파기</h2>
-<p>개발자는 개인정보를 보관하지 않습니다. 기기 안의 게임 기록은 앱을 삭제하면 언제든 지울 수 있습니다.</p>
-<h2>9. 이용자와 보호자의 권리</h2>
-<p>이용자와 보호자는 언제든 개인정보 처리에 대해 문의하거나 삭제를 요청할 수 있습니다. 아래 연락처로 알려 주시면 지체 없이 답변드리겠습니다.</p>
-<h2>10. 개인정보 보호책임자 및 문의</h2>
-<ul>
-<li>개발자: EHNY Games</li>
+
+
+</section>
+<section aria-labelledby="ko-section-7"><h2 id="ko-section-7"><strong>7. 제3자 제공 및 처리 위탁</strong></h2>
+<p>개발자는 이용자의 정보를 다른 사람이나 회사에 팔거나 제공하지 않습니다. 위 3~6항의 Google·Unity 서비스 외에 정보 처리를 맡기는 곳은 없습니다.</p>
+
+
+</section>
+<section aria-labelledby="ko-section-8"><h2 id="ko-section-8"><strong>8. 어린이(만 14세 미만)의 개인정보</strong></h2>
+<p>게임은 어린이와 가족이 함께 즐기도록 만들어졌습니다. 개발자는 어린이를 알아볼 수 있는 개인정보를 수집하지 않으며, 「개인정보 보호법」, 미국 아동 온라인 개인정보 보호법(COPPA), 유럽 일반개인정보보호법(GDPR) 등 관련 법을 지키기 위해 노력합니다. 이웃 마을 기능에는 채팅이나 자유 글이 없고, 마을 이름도 정해진 낱말 중에서만 고릅니다. 바깥 링크, 구매 화면 등은 보호자 확인을 거친 뒤에만 열립니다.</p>
+
+
+</section>
+<section aria-labelledby="ko-section-9"><h2 id="ko-section-9"><strong>9. 정보의 보관과 파기</strong></h2>
+<p>기기 안의 게임 기록은 앱을 삭제하면 지워집니다. 서버의 마을 정보는 &quot;내 마을 공개&quot;를 끄면 바로 지워지며, 아래 메일로 요청하셔도 지워 드립니다(게임 안 [이웃 마을] 창의 마을 코드를 알려 주세요). 1년 넘게 바뀌지 않은 마을 정보는 지울 수 있습니다.</p>
+
+
+</section>
+<section aria-labelledby="ko-section-10"><h2 id="ko-section-10"><strong>10. 이용자와 보호자의 권리</strong></h2>
+<p>이용자와 보호자는 언제든 정보 처리에 대해 문의하거나 열람·삭제를 요청할 수 있습니다. 아래 연락처로 알려 주시면 지체 없이 답변드리겠습니다.</p>
+
+
+</section>
+<section aria-labelledby="ko-section-11"><h2 id="ko-section-11"><strong>11. 개인정보 보호책임자 및 문의</strong></h2>
+
+<ul><li>개발자: EHNY Games</li>
 <li>책임자: Dean Kang</li>
-<li>이메일: <a href="mailto:privacy@ehnygames.com">privacy@ehnygames.com</a></li>
-</ul>
-<h2>11. 방침의 변경</h2>
+<li>이메일: <a href="mailto:contact@ehnygames.com">contact@ehnygames.com</a></li></ul>
+
+</section>
+<section aria-labelledby="ko-section-12"><h2 id="ko-section-12"><strong>12. 방침의 변경</strong></h2>
 <p>이 방침이 바뀌면 이 페이지에 시행일과 함께 알려 드립니다.</p>
+
+
+</section>
+<p class="policy-updated">최종 수정일: 2026년 11월 9일</p>
 </article>
-<article lang="en" aria-labelledby="title-en">
+<article id="policy-en" lang="en" aria-labelledby="title-en">
 <h1 id="title-en">The Kingdom Where Stories Bloom — Privacy Policy</h1>
-<p>Effective date: November 8, 2026</p>
+<p>Effective date: November 9, 2026</p>
 <p>EHNY Games (&quot;we&quot;) cares about the privacy of everyone who plays our mobile game <em>The Kingdom Where Stories Bloom</em> (the &quot;Game&quot;), especially children. This policy explains what information the Game handles and how we protect it.</p>
-<h2>1. We do not collect personal information</h2>
-<p>The Game has no sign-up, login, chat, or access to photos, contacts, or location. We do not receive or store your name, email, phone number, age, or any other information that identifies you.</p>
-<h2>2. Information stored only on your device</h2>
-<p>Your game progress (restored shops, hearts, petals, sun drops, decorations, sound and language settings, and whether the Complete Edition was purchased) is saved only on your device and is never sent to our servers. Deleting the Game deletes this data.</p>
-<h2>3. Advertising (Google AdMob)</h2>
+<section aria-labelledby="en-section-1"><h2 id="en-section-1"><strong>1. We do not collect information that identifies you</strong></h2>
+<p>The Game has no sign-up, chat, or access to photos, contacts, or location. We do not receive or store your name, email, phone number, age, or any other information that identifies you.</p>
+
+
+</section>
+<section aria-labelledby="en-section-2"><h2 id="en-section-2"><strong>2. Information stored only on your device</strong></h2>
+<p>Your game progress (restored shops, hearts, petals, energy, sound and language settings, whether the Kingdom Key was purchased, and your friend and bookmark lists) is saved on your device. Deleting the Game deletes this data.</p>
+
+
+</section>
+<section aria-labelledby="en-section-3"><h2 id="en-section-3"><strong>3. Visiting neighbor villages (Google Firebase)</strong></h2>
+<p>So players can visit each other's &quot;My Village,&quot; the following is stored on Google Firebase (Firestore) servers:</p>
+<ul><li>A randomly generated anonymous user number (not linked to any name or email)</li>
+<li>Your village code (8 random characters) and a village name chosen from preset words</li>
+<li>Your village layout (which buildings and decorations are placed where), sparkle score, number of likes received, and last update time</li>
+<li>Which village received a like from which anonymous number, and on which day</li></ul>
+<p>There is no chat, free-form text, or photo sharing. Other players can see only the village layout, village name, village code, and like count. Turning off &quot;My village: Public&quot; in the Neighbor Villages window deletes your village from the server and stops future uploads. Data is encrypted in transit. See Google's Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+</section>
+<section aria-labelledby="en-section-4"><h2 id="en-section-4"><strong>4. Advertising (Google AdMob)</strong></h2>
 <p>The Game may show optional rewarded ads that play only when the player chooses. Ads are provided by Google AdMob, configured as follows:</p>
-<ul>
-<li>The Game is tagged as child-directed, so no personalized (interest-based) ads are shown.</li>
+<ul><li>The Game is tagged as child-directed, so no personalized (interest-based) ads are shown.</li>
 <li>Only family-friendly ads are requested.</li>
-<li>The Android advertising ID is not collected or transmitted.</li>
-</ul>
-<p>To deliver ads and prevent fraud, Google may process limited technical information (for example, device type, OS version, and IP-based approximate region). See Google's Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-<h2>4. Purchases (Google Play)</h2>
-<p>The &quot;Complete Edition&quot; can be purchased only through Google Play Billing, behind a parent check. Payment details (such as card numbers) are handled by Google; we never receive them. We only confirm that a purchase was completed in order to unlock content.</p>
-<h2>5. Game engine</h2>
+<li>The Android advertising ID is not collected or transmitted.</li></ul>
+<p>To deliver ads and prevent fraud, Google may process limited technical information (for example, device type, OS version, and IP-based approximate region).</p>
+</section>
+<section aria-labelledby="en-section-5"><h2 id="en-section-5"><strong>5. Purchases (Google Play)</strong></h2>
+<p>The &quot;Kingdom Key&quot; can be purchased only through Google Play Billing, behind a parent check. Payment details (such as card numbers) are handled by Google; we never receive them. We only confirm that a purchase was completed in order to unlock content.</p>
+
+
+</section>
+<section aria-labelledby="en-section-6"><h2 id="en-section-6"><strong>6. Game engine</strong></h2>
 <p>The Game is built with the Unity engine. Unity may process anonymized technical information (such as device type and crash logs) to keep the app stable. We do not use any separate analytics or tracking tools.</p>
-<h2>6. Sharing</h2>
-<p>We do not sell or share your personal information. Apart from the Google and Unity services described above, no one processes data on our behalf.</p>
-<h2>7. Children's privacy</h2>
-<p>The Game is made for children and families to enjoy together. We do not knowingly collect personal information from children, and we work to comply with applicable laws, including Korea's Personal Information Protection Act, the U.S. Children's Online Privacy Protection Act (COPPA), and the EU General Data Protection Regulation (GDPR). External links and purchase screens open only after a parent check.</p>
-<h2>8. Retention and deletion</h2>
-<p>We do not retain personal information. Game data on your device can be erased at any time by uninstalling the Game.</p>
-<h2>9. Your rights</h2>
-<p>Players and parents may contact us at any time with questions or deletion requests. We will respond promptly.</p>
-<h2>10. Contact</h2>
-<ul>
-<li>Developer: EHNY Games</li>
+
+
+</section>
+<section aria-labelledby="en-section-7"><h2 id="en-section-7"><strong>7. Sharing</strong></h2>
+<p>We do not sell or share your information. Apart from the Google and Unity services described above, no one processes data on our behalf.</p>
+
+
+</section>
+<section aria-labelledby="en-section-8"><h2 id="en-section-8"><strong>8. Children's privacy</strong></h2>
+<p>The Game is made for children and families to enjoy together. We do not collect personal information that identifies children, and we work to comply with applicable laws, including Korea's Personal Information Protection Act, the U.S. Children's Online Privacy Protection Act (COPPA), and the EU General Data Protection Regulation (GDPR). The neighbor feature has no chat or free-form text, and village names are chosen from preset words only. External links and purchase screens open only after a parent check.</p>
+
+
+</section>
+<section aria-labelledby="en-section-9"><h2 id="en-section-9"><strong>9. Retention and deletion</strong></h2>
+<p>Game data on your device is erased when you uninstall the Game. Village data on the server is deleted immediately when &quot;My village: Public&quot; is turned off, or on request by email (please include your village code from the Neighbor Villages window). Village data not updated for over a year may be deleted.</p>
+
+
+</section>
+<section aria-labelledby="en-section-10"><h2 id="en-section-10"><strong>10. Your rights</strong></h2>
+<p>Players and parents may contact us at any time with questions or requests to access or delete data. We will respond promptly.</p>
+
+
+</section>
+<section aria-labelledby="en-section-11"><h2 id="en-section-11"><strong>11. Contact</strong></h2>
+
+<ul><li>Developer: EHNY Games</li>
 <li>Contact: Dean Kang</li>
-<li>Email: <a href="mailto:privacy@ehnygames.com">privacy@ehnygames.com</a></li>
-</ul>
-<h2>11. Changes</h2>
+<li>Email: <a href="mailto:contact@ehnygames.com">contact@ehnygames.com</a></li></ul>
+
+</section>
+<section aria-labelledby="en-section-12"><h2 id="en-section-12"><strong>12. Changes</strong></h2>
 <p>If this policy changes, we will post the new version on this page with its effective date.</p>
+
+
+</section>
+<p class="policy-updated">Last updated: November 9, 2026</p>
 </article>
 </main>
 <footer>© 2026 EHNY Games</footer>
 <script>
 (function(){
-  var articles=document.querySelectorAll('article[lang]');
-  var buttons=document.querySelectorAll('button[data-lang]');
-  function selectLanguage(lang){
-    document.documentElement.lang=lang;
-    articles.forEach(function(article){article.hidden=article.lang!==lang;});
-    buttons.forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.lang===lang));});
-    document.title=document.getElementById('title-'+lang).textContent;
-    var initial=document.getElementById('initial-language');
-    if(initial)initial.remove();
-  }
-  buttons.forEach(function(button){button.addEventListener('click',function(){selectLanguage(button.dataset.lang);});});
-  selectLanguage(document.documentElement.lang);
+var links=document.querySelectorAll('.languages a[data-lang]');
+function mark(lang){document.documentElement.lang=lang;document.title=document.getElementById('title-'+lang).textContent;links.forEach(function(a){if(a.dataset.lang===lang)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}
+function fromHash(){return location.hash==='#policy-en'?'en':location.hash==='#policy-ko'?'ko':null;}
+links.forEach(function(a){a.addEventListener('click',function(){mark(a.dataset.lang);});});
+window.addEventListener('hashchange',function(){var lang=fromHash();if(lang)mark(lang);});
+var requested=new URLSearchParams(location.search).get('lang');
+var lang=fromHash()||(requested==='ko'||requested==='en'?requested:((navigator.language||'en').toLowerCase().startsWith('ko')?'ko':'en'));
+mark(lang);
+if(!location.hash&&lang==='en')document.getElementById('policy-en').scrollIntoView();
 })();
 </script>
 </body>
