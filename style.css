@@ -171,3 +171,38 @@ header .top .language-toggle{gap:0;flex:none;border:1px solid #7896bd;border-rad
 .multilingual-home header .top nav>a>span{display:none}
 .top nav .four-language-links a.language{min-width:32px;min-height:44px;padding:6px 0;font-size:12px}
 }
+
+/* Equal language segments, including browsers that enlarge mobile text. */
+body header .top nav .language-toggle{
+ display:grid;grid-auto-flow:column;grid-auto-columns:40px;align-items:stretch;gap:2px;
+ height:44px;padding:4px;margin:0;flex:none;box-sizing:border-box;
+ border:1px solid #7896bd;border-radius:999px;background:#ffffff08;
+ font-family:Arial,"Malgun Gothic","Microsoft JhengHei",sans-serif;
+ font-size:13px;font-weight:700;line-height:1;letter-spacing:0;
+ -webkit-text-size-adjust:100%;text-size-adjust:100%;
+}
+body header .top nav .language-toggle>a.language,
+body header .top nav .language-toggle>button{
+ display:grid;place-items:center;align-self:stretch;gap:0;
+ width:40px;height:34px;min-width:0;min-height:0;margin:0;padding:0;
+ box-sizing:border-box;border:0;border-radius:999px;background:transparent;box-shadow:none;
+ font:inherit;line-height:1;letter-spacing:0;text-align:center;text-indent:0;
+ white-space:nowrap;text-decoration:none;transform:none;
+ -webkit-appearance:none;appearance:none;-webkit-text-size-adjust:100%;text-size-adjust:100%;
+}
+body header .top nav .language-toggle .lang-long{display:none}
+body header .top nav .language-toggle .lang-short{
+ display:block;margin:0;padding:0;font:inherit;line-height:1;letter-spacing:0;
+ text-align:center;transform:none;
+}
+body header .top nav .language-toggle>a[aria-current="page"],
+body header .top nav .language-toggle>button[aria-pressed="true"]{
+ background:#f0d4db;color:#722b40;border:0;box-shadow:none;
+}
+body header .top nav .language-toggle>a:hover,
+body header .top nav .language-toggle>button:hover{transform:none}
+@media(max-width:620px){
+ body header .top nav .language-toggle{grid-auto-columns:32px}
+ body header .top nav .language-toggle>a.language,
+ body header .top nav .language-toggle>button{width:32px;height:34px;padding:0;min-height:0;min-width:0}
+}
