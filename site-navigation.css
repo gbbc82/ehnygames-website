@@ -22,3 +22,8 @@
  .site-header .top nav>a>span{display:none}
  .site-footer .footer-grid{grid-template-columns:1fr;gap:28px}
 }
+
+/* Keep support links clean while retaining their focus outline and targets. */
+body[data-site-kind="support"] main a,
+body[data-site-kind="support"] main a:hover,
+body[data-site-kind="support"] main a:focus{text-decoration:none}
