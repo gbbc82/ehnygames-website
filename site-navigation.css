@@ -1,0 +1,24 @@
+/* One header/footer presentation across studio, games, support and policies. */
+.site-header{font-family:system-ui,"Malgun Gothic",sans-serif;font-size:16px;line-height:1.65;background:#0b1b3b;color:#fff}
+.site-header .top{padding-block:16px}
+.site-header .brand img{width:170px;height:auto}
+.site-footer{font-family:system-ui,"Malgun Gothic",sans-serif;font-size:16px;line-height:1.65;text-align:left;padding:0;letter-spacing:normal;background:linear-gradient(135deg,#193b62,#0b1b3b);color:#e9f3ff}
+.site-footer .brand img{width:170px;height:auto}
+.site-footer h2{font-family:inherit;font-size:15px;line-height:1.5;letter-spacing:normal;margin:0 0 14px;color:#8af7d6}
+.site-footer .footer-brand p{font-size:15px;color:#c7d8f2;letter-spacing:normal;margin:18px 0 0}
+.site-footer a{color:inherit}
+.site-footer .footer-bottom{font-size:13px;letter-spacing:normal}
+.site-footer .footer-links a{font-size:15px;line-height:1.6;overflow-wrap:anywhere}
+.site-footer .footer-links a[href^="mailto:"]{display:block}
+.site-footer .footer-links a[href^="mailto:"] span{white-space:nowrap}
+.reading>h1{word-break:keep-all;overflow-wrap:anywhere}
+.policy-shortcuts{justify-content:flex-start;margin:0 0 24px}
+@media(max-width:620px){
+ .site-header .top{flex-wrap:nowrap;gap:8px;padding-block:10px}
+ .site-header .top .brand img{width:clamp(72px,22vw,100px)}
+ .site-header .top nav{flex-wrap:nowrap;gap:3px;margin-left:auto}
+ .site-header .top nav>a{min-width:30px;min-height:44px;padding:4px;justify-content:center}
+ .site-header .top nav>a>svg{display:block;width:20px;height:20px}
+ .site-header .top nav>a>span{display:none}
+ .site-footer .footer-grid{grid-template-columns:1fr;gap:28px}
+}

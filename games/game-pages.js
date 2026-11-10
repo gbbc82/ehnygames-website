@@ -15,6 +15,7 @@ document.querySelector('.policies-nav').href=fallback==='ko'?'/privacy/':'/en/pr
 document.querySelector('meta[name="description"]').content=c.description;document.querySelector('meta[property="og:title"]').content=c.title;
 document.querySelector('meta[property="og:description"]').content=c.description;document.querySelector('meta[property="og:image"]').content=c.image;
 document.querySelector('meta[property="og:locale"]').content=({ko:'ko_KR',en:'en_US',ja:'ja_JP','zh-TW':'zh_TW'})[lang];document.querySelector('meta[name="twitter:image"]').content=c.image;
+window.dispatchEvent(new CustomEvent('ehny:languagechange',{detail:lang}));
 if(updateUrl){var u=new URL(location.href);u.searchParams.set('lang',lang);u.searchParams.delete('v');history.replaceState(null,'',u.pathname+u.search+u.hash);}
 }
 document.querySelectorAll('.language-toggle [data-lang]').forEach(function(b){b.addEventListener('click',function(e){if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();setLanguage(b.dataset.lang,true);});});
